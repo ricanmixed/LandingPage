@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b4e">
+  <meta name="description" content="Patriot House Sober Living in Oklahoma City offers a safe, structured, supportive environment for men building a foundation for recovery.">
+  <title>Patriot House Sober Living | Oklahoma City</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #102b4e;
+      --navy-deep: #081a30;
+      --blue: #1f5c98;
+      --red: #c84343;
+      --white: #fff;
+      --pale: #f3f6fa;
+      --ink: #182638;
+      --muted: #5d6b7b;
+      --line: #dfe6ee;
+      --gold: #e8b95d;
+      --radius: 20px;
+      --shadow: 0 18px 55px rgba(8, 26, 48, .12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: "DM Sans", sans-serif; color: var(--ink); line-height: 1.6; background: #fff; }
+    a { color: inherit; }
+    .topline { height: 6px; background: linear-gradient(90deg, var(--red) 0 33.3%, #fff 33.3% 66.6%, var(--blue) 66.6%); }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    header { position: relative; z-index: 2; background: rgba(255,255,255,.96); border-bottom: 1px solid rgba(223,230,238,.8); }
+    .nav { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand-mark { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; color: white; font-size: 25px; background: var(--navy); box-shadow: 0 6px 16px #102b4e2b; position: relative; overflow: hidden; }
+    .brand-mark:after { content: ""; position: absolute; height: 5px; left: 0; right: 0; bottom: 0; background: var(--red); }
+    .brand-name { font-family: Montserrat, sans-serif; font-size: 15px; font-weight: 800; line-height: 1.15; letter-spacing: .02em; color: var(--navy); }
+    .brand-name span { display: block; margin-top: 5px; font-family: "DM Sans", sans-serif; font-size: 10px; letter-spacing: .19em; font-weight: 700; color: var(--muted); }
+    .nav-right { display: flex; align-items: center; gap: 22px; }
+    .nav-right a:not(.btn) { text-decoration: none; font-size: 14px; font-weight: 700; color: var(--navy); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 13px 19px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 14px; border: 1px solid transparent; transition: transform .2s, box-shadow .2s, background .2s; cursor: pointer; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(8,26,48,.15); }
+    .btn-primary { color: #fff; background: var(--red); }
+    .btn-light { color: var(--navy); background: #fff; border-color: rgba(255,255,255,.5); }
+    .hero { color: white; position: relative; overflow: hidden; background: radial-gradient(circle at 83% 22%, rgba(55,110,163,.48), transparent 30%), linear-gradient(120deg, var(--navy-deep), var(--navy) 58%, #164879); }
+    .hero:before { content: ""; position: absolute; width: 560px; height: 560px; right: -190px; bottom: -340px; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; box-shadow: 0 0 0 55px rgba(255,255,255,.025), 0 0 0 110px rgba(255,255,255,.02); }
+    .hero-grid { min-height: 575px; padding: 80px 0 86px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 55px; align-items: center; position: relative; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; text-transform: uppercase; letter-spacing: .15em; font-size: 11px; font-weight: 800; color: #f4d28e; }
+    .eyebrow:before { content: ""; width: 27px; height: 2px; background: var(--red); }
+    h1, h2, h3 { font-family: Montserrat, sans-serif; }
+    h1 { max-width: 690px; font-size: clamp(38px, 5.2vw, 62px); line-height: 1.08; letter-spacing: -.045em; margin: 20px 0 22px; }
+    h1 em { font-style: normal; color: #f4d28e; }
+    .hero-copy { max-width: 610px; font-size: 18px; color: #dbe6f1; margin: 0 0 29px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-note { margin-top: 26px; display: flex; align-items: center; gap: 10px; color: #c6d5e5; font-size: 13px; }
+    .hero-note strong { color: white; }
+    .hero-card { padding: 30px; border-radius: 24px; background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(8px); box-shadow: 0 25px 65px rgba(0,0,0,.12); }
+    .card-star { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 16px; background: var(--gold); color: var(--navy); font-size: 25px; margin-bottom: 22px; }
+    .hero-card h2 { margin: 0 0 10px; font-size: 23px; }
+    .hero-card p { margin: 0; color: #dbe6f1; font-size: 14px; }
+    .hero-card ul { padding: 0; margin: 22px 0 0; list-style: none; }
+    .hero-card li { padding: 12px 0; border-top: 1px solid rgba(255,255,255,.15); display: flex; gap: 11px; font-size: 14px; color: #f5f8fc; }
+    .check { color: #f4d28e; font-weight: 900; }
+    .trust-strip { background: #fff; border-bottom: 1px solid var(--line); }
+    .trust-inner { min-height: 100px; display: grid; grid-template-columns: repeat(3, 1fr); align-items: center; gap: 20px; }
+    .trust-item { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 20px 10px; }
+    .trust-icon { flex: 0 0 42px; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 13px; color: var(--blue); background: #eaf2fb; font-size: 19px; }
+    .trust-item strong { display: block; color: var(--navy); font-size: 14px; }
+    .trust-item span { display: block; color: var(--muted); font-size: 12px; }
+    section { padding: 82px 0; }
+    .section-head { max-width: 670px; margin: 0 auto 42px; text-align: center; }
+    .section-head .eyebrow { color: var(--blue); }
+    .section-head h2 { color: var(--navy); font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; letter-spacing: -.035em; margin: 14px 0; }
+    .section-head p { color: var(--muted); margin: 0; font-size: 16px; }
+    .features { background: var(--pale); }
+    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .feature { background: #fff; border: 1px solid #e8edf3; border-radius: var(--radius); padding: 27px; box-shadow: 0 8px 25px rgba(16,43,78,.035); }
+    .feature-icon { width: 48px; height: 48px; border-radius: 15px; display: grid; place-items: center; background: #edf3fa; color: var(--blue); font-size: 22px; margin-bottom: 20px; }
+    .feature h3 { margin: 0 0 9px; color: var(--navy); font-size: 18px; }
+    .feature p { color: var(--muted); margin: 0; font-size: 14px; }
+    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 60px; align-items: center; }
+    .about-panel { background: var(--navy); border-radius: 24px; color: #fff; padding: 35px; position: relative; overflow: hidden; }
+    .about-panel:after { content: "★"; position: absolute; right: -12px; bottom: -65px; font-size: 220px; line-height: 1; color: rgba(255,255,255,.045); }
+    .about-panel .quote-mark { color: var(--gold); font-family: Georgia, serif; font-size: 55px; line-height: .8; }
+    .about-panel blockquote { margin: 15px 0 25px; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 25px; line-height: 1.3; position: relative; z-index: 1; }
+    .about-panel p { margin: 0; color: #d3dfeb; font-size: 14px; position: relative; z-index: 1; }
+    .about-copy .eyebrow { color: var(--blue); }
+    .about-copy h2 { margin: 14px 0 18px; color: var(--navy); font-size: clamp(29px, 3.3vw, 39px); line-height: 1.15; letter-spacing: -.035em; }
+    .about-copy p { color: var(--muted); }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { border-radius: 999px; padding: 8px 12px; background: #eef3f8; color: var(--navy); font-size: 12px; font-weight: 700; }
+    .contact { color: #fff; background: linear-gradient(120deg, var(--navy-deep), var(--navy)); }
+    .contact-grid { display: grid; grid-template-columns: 1fr .9fr; gap: 60px; align-items: center; }
+    .contact h2 { font-size: clamp(30px, 4vw, 44px); line-height: 1.13; letter-spacing: -.035em; margin: 14px 0; }
+    .contact-copy p { color: #d4e0ec; max-width: 560px; }
+    .contact-box { background: #fff; color: var(--ink); border-radius: 22px; padding: 28px; box-shadow: var(--shadow); }
+    .contact-box h3 { color: var(--navy); margin: 0 0 20px; font-size: 19px; }
+    .contact-line { display: flex; gap: 13px; align-items: flex-start; padding: 14px 0; border-top: 1px solid var(--line); }
+    .contact-line .trust-icon { flex-basis: 40px; width: 40px; height: 40px; }
+    .contact-line strong { display: block; font-size: 13px; color: var(--navy); }
+    .contact-line a, .contact-line span { font-size: 14px; color: var(--muted); text-decoration: none; overflow-wrap: anywhere; }
+    .contact-line a:hover { color: var(--red); text-decoration: underline; }
+    footer { padding: 27px 0; background: #07172a; color: #aebdcd; font-size: 12px; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .footer-brand { color: white; font-weight: 800; font-family: Montserrat, sans-serif; }
+    .disclaimer { max-width: 760px; margin-top: 9px; color: #8397ad; font-size: 11px; }
+    @media (max-width: 800px) {
+      .nav { min-height: 74px; }
+      .nav-right a:not(.btn) { display: none; }
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 35px; }
+      .hero-grid { padding: 64px 0; }
+      .hero-card { max-width: 520px; }
+      .trust-inner { grid-template-columns: 1fr; gap: 0; padding: 10px 0; }
+      .trust-item { justify-content: flex-start; padding: 10px 0; }
+      section { padding: 64px 0; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .about-grid { gap: 28px; }
+      .contact-grid { gap: 28px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 460px) {
+      .wrap { width: min(100% - 28px, 1120px); }
+      .brand-mark { width: 42px; height: 42px; }
+      .brand-name { font-size: 13px; }
+      .nav-right .btn { padding: 11px 13px; font-size: 12px; }
+      .hero-copy { font-size: 16px; }
+      .hero-card, .contact-box, .about-panel { padding: 24px; }
+      .hero-actions .btn { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *:before, *:after { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#" aria-label="Patriot House Sober Living home">
+        <div class="brand-mark" aria-hidden="true">★</div>
+        <div class="brand-name">PATRIOT HOUSE<span>SOBER LIVING · OKLAHOMA CITY</span></div>
+      </a>
+      <nav class="nav-right" aria-label="Main navigation">
+        <a href="#approach">Our Approach</a>
+        <a href="#support">Support</a>
+        <a class="btn btn-primary" href="#contact">Contact Us <span aria-hidden="true">→</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">A fresh start. A stronger foundation.</div>
+          <h1>Recovery grows with <em>structure, support,</em> and community.</h1>
+          <p class="hero-copy">Patriot House Sober Living provides men in recovery with a supportive, structured living environment in Oklahoma City—so they can focus on building healthy routines and moving forward.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:+14059230664">Call to Ask About Availability <span aria-hidden="true">→</span></a>
+            <a class="btn btn-light" href="mailto:info@patriothouseokc.org?subject=Patriot%20House%20Sober%20Living%20Inquiry">Email Our Program Director</a>
+          </div>
+          <div class="hero-note"><span aria-hidden="true">✦</span> <span><strong>Safe. Structured. Supportive.</strong> One day and one step at a time.</span></div>
+        </div>
+        <aside class="hero-card" aria-label="What Patriot House offers">
+          <div class="card-star" aria-hidden="true">★</div>
+          <h2>A place to keep moving forward.</h2>
+          <p>Recovery is built through everyday choices, accountability, and connection. We help residents create space for those choices.</p>
+          <ul>
+            <li><span class="check">✓</span> A structured sober-living environment</li>
+            <li><span class="check">✓</span> Recovery-focused routines and accountability</li>
+            <li><span class="check">✓</span> Help connecting with community resources</li>
+            <li><span class="check">✓</span> Faith-based, 12-step, and SMART Recovery options</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="wrap trust-inner">
+        <div class="trust-item"><div class="trust-icon" aria-hidden="true">⌂</div><div><strong>Supportive Living</strong><span>A home-centered recovery environment</span></div></div>
+        <div class="trust-item"><div class="trust-icon" aria-hidden="true">◎</div><div><strong>Practical Life Support</strong><span>Routines, resources, and next steps</span></div></div>
+        <div class="trust-item"><div class="trust-icon" aria-hidden="true">✦</div><div><strong>Community & Connection</strong><span>Encouragement through the process</span></div></div>
+      </div>
+    </div>
+
+    <section class="features" id="support">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Support for the next chapter</div>
+          <h2>More than a place to stay.</h2>
+          <p>A stable living environment can help make room for the daily work of recovery. Our focus is on structure, responsibility, and connecting residents with useful support.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">✓</div>
+            <h3>Structure & Accountability</h3>
+            <p>Clear house expectations, shared responsibilities, and recovery-minded routines help residents practice consistency and independence.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">↗</div>
+            <h3>Work & Life Skills</h3>
+            <p>Support connecting with employment resources, community services, and practical next steps toward greater stability.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">♡</div>
+            <h3>Recovery Community</h3>
+            <p>Residents can explore faith-based support, 12-step meetings, SMART Recovery, and other community recovery resources.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="wrap about-grid">
+        <div class="about-panel">
+          <div class="quote-mark" aria-hidden="true">“</div>
+          <blockquote>You don’t have to have your whole future figured out. Start by building a solid foundation today.</blockquote>
+          <p>Small steps. Honest effort. A community that encourages progress.</p>
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow">Our approach</div>
+          <h2>Progress happens one day at a time.</h2>
+          <p>At Patriot House, we believe a dependable environment and a community of accountability can support people as they work toward lasting recovery. Our goal is to encourage responsible choices, healthy routines, and connection to resources that support the next stage of life.</p>
+          <p>We welcome inquiries from individuals, families, case managers, treatment providers, and other referral partners who want to learn more about our sober-living program.</p>
+          <div class="pill-list">
+            <span class="pill">Safe</span><span class="pill">Structured</span><span class="pill">Supportive</span><span class="pill">Community-minded</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div class="contact-copy">
+          <div class="eyebrow">Take the next step</div>
+          <h2>Have questions about living at Patriot House?</h2>
+          <p>Reach out to ask about the program, current availability, expectations, or referral information. We’ll help you understand the next steps.</p>
+          <a class="btn btn-primary" href="tel:+14059230664">Call the Program Director <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="contact-box">
+          <h3>Contact Patriot House</h3>
+          <div class="contact-line">
+            <div class="trust-icon" aria-hidden="true">☎</div>
+            <div><strong>Phone</strong><a href="tel:+14059230664">609-525-4506</a></div>
+          </div>
+          <div class="contact-line">
+            <div class="trust-icon" aria-hidden="true">✉</div>
+            <div><strong>Email</strong><a href="mailto:info@patriothouseokc.org">info@patriothouseokc.org</a></div>
+          </div>
+          <div class="contact-line">
+            <div class="trust-icon" aria-hidden="true">⌖</div>
+            <div><strong>Location</strong><span>Northwest Expressway & MacArthur area<br>Oklahoma City, Oklahoma</span></div>
+          </div>
+          <div class="contact-line">
+            <div class="trust-icon" aria-hidden="true">◷</div>
+            <div><strong>Availability</strong><span>Please contact us for current bed availability and program details.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-inner">
+        <div><div class="footer-brand">PATRIOT HOUSE SOBER LIVING</div><div>Oklahoma City, Oklahoma</div></div>
+        <div>© <span id="year">2026</span> Patriot House Sober Living. All rights reserved.</div>
+      </div>
+      <div class="disclaimer">Patriot House is a sober-living residence, not a hospital, detoxification facility, or substitute for medical or behavioral-health treatment. Program availability and services may vary. If you are experiencing a medical emergency, call 911.</div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
