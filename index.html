@@ -1,275 +1,883 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#102b4e">
-  <meta name="description" content="Patriot House Sober Living in Oklahoma City offers a safe, structured, supportive environment for men building a foundation for recovery.">
-  <title>Patriot House Sober Living | Oklahoma City</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --navy: #102b4e;
-      --navy-deep: #081a30;
-      --blue: #1f5c98;
-      --red: #c84343;
-      --white: #fff;
-      --pale: #f3f6fa;
-      --ink: #182638;
-      --muted: #5d6b7b;
-      --line: #dfe6ee;
-      --gold: #e8b95d;
-      --radius: 20px;
-      --shadow: 0 18px 55px rgba(8, 26, 48, .12);
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: "DM Sans", sans-serif; color: var(--ink); line-height: 1.6; background: #fff; }
-    a { color: inherit; }
-    .topline { height: 6px; background: linear-gradient(90deg, var(--red) 0 33.3%, #fff 33.3% 66.6%, var(--blue) 66.6%); }
-    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
-    header { position: relative; z-index: 2; background: rgba(255,255,255,.96); border-bottom: 1px solid rgba(223,230,238,.8); }
-    .nav { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-    .brand-mark { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; color: white; font-size: 25px; background: var(--navy); box-shadow: 0 6px 16px #102b4e2b; position: relative; overflow: hidden; }
-    .brand-mark:after { content: ""; position: absolute; height: 5px; left: 0; right: 0; bottom: 0; background: var(--red); }
-    .brand-name { font-family: Montserrat, sans-serif; font-size: 15px; font-weight: 800; line-height: 1.15; letter-spacing: .02em; color: var(--navy); }
-    .brand-name span { display: block; margin-top: 5px; font-family: "DM Sans", sans-serif; font-size: 10px; letter-spacing: .19em; font-weight: 700; color: var(--muted); }
-    .nav-right { display: flex; align-items: center; gap: 22px; }
-    .nav-right a:not(.btn) { text-decoration: none; font-size: 14px; font-weight: 700; color: var(--navy); }
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 13px 19px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 14px; border: 1px solid transparent; transition: transform .2s, box-shadow .2s, background .2s; cursor: pointer; }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(8,26,48,.15); }
-    .btn-primary { color: #fff; background: var(--red); }
-    .btn-light { color: var(--navy); background: #fff; border-color: rgba(255,255,255,.5); }
-    .hero { color: white; position: relative; overflow: hidden; background: radial-gradient(circle at 83% 22%, rgba(55,110,163,.48), transparent 30%), linear-gradient(120deg, var(--navy-deep), var(--navy) 58%, #164879); }
-    .hero:before { content: ""; position: absolute; width: 560px; height: 560px; right: -190px; bottom: -340px; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; box-shadow: 0 0 0 55px rgba(255,255,255,.025), 0 0 0 110px rgba(255,255,255,.02); }
-    .hero-grid { min-height: 575px; padding: 80px 0 86px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 55px; align-items: center; position: relative; }
-    .eyebrow { display: inline-flex; align-items: center; gap: 9px; text-transform: uppercase; letter-spacing: .15em; font-size: 11px; font-weight: 800; color: #f4d28e; }
-    .eyebrow:before { content: ""; width: 27px; height: 2px; background: var(--red); }
-    h1, h2, h3 { font-family: Montserrat, sans-serif; }
-    h1 { max-width: 690px; font-size: clamp(38px, 5.2vw, 62px); line-height: 1.08; letter-spacing: -.045em; margin: 20px 0 22px; }
-    h1 em { font-style: normal; color: #f4d28e; }
-    .hero-copy { max-width: 610px; font-size: 18px; color: #dbe6f1; margin: 0 0 29px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    .hero-note { margin-top: 26px; display: flex; align-items: center; gap: 10px; color: #c6d5e5; font-size: 13px; }
-    .hero-note strong { color: white; }
-    .hero-card { padding: 30px; border-radius: 24px; background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(8px); box-shadow: 0 25px 65px rgba(0,0,0,.12); }
-    .card-star { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 16px; background: var(--gold); color: var(--navy); font-size: 25px; margin-bottom: 22px; }
-    .hero-card h2 { margin: 0 0 10px; font-size: 23px; }
-    .hero-card p { margin: 0; color: #dbe6f1; font-size: 14px; }
-    .hero-card ul { padding: 0; margin: 22px 0 0; list-style: none; }
-    .hero-card li { padding: 12px 0; border-top: 1px solid rgba(255,255,255,.15); display: flex; gap: 11px; font-size: 14px; color: #f5f8fc; }
-    .check { color: #f4d28e; font-weight: 900; }
-    .trust-strip { background: #fff; border-bottom: 1px solid var(--line); }
-    .trust-inner { min-height: 100px; display: grid; grid-template-columns: repeat(3, 1fr); align-items: center; gap: 20px; }
-    .trust-item { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 20px 10px; }
-    .trust-icon { flex: 0 0 42px; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 13px; color: var(--blue); background: #eaf2fb; font-size: 19px; }
-    .trust-item strong { display: block; color: var(--navy); font-size: 14px; }
-    .trust-item span { display: block; color: var(--muted); font-size: 12px; }
-    section { padding: 82px 0; }
-    .section-head { max-width: 670px; margin: 0 auto 42px; text-align: center; }
-    .section-head .eyebrow { color: var(--blue); }
-    .section-head h2 { color: var(--navy); font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; letter-spacing: -.035em; margin: 14px 0; }
-    .section-head p { color: var(--muted); margin: 0; font-size: 16px; }
-    .features { background: var(--pale); }
-    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .feature { background: #fff; border: 1px solid #e8edf3; border-radius: var(--radius); padding: 27px; box-shadow: 0 8px 25px rgba(16,43,78,.035); }
-    .feature-icon { width: 48px; height: 48px; border-radius: 15px; display: grid; place-items: center; background: #edf3fa; color: var(--blue); font-size: 22px; margin-bottom: 20px; }
-    .feature h3 { margin: 0 0 9px; color: var(--navy); font-size: 18px; }
-    .feature p { color: var(--muted); margin: 0; font-size: 14px; }
-    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 60px; align-items: center; }
-    .about-panel { background: var(--navy); border-radius: 24px; color: #fff; padding: 35px; position: relative; overflow: hidden; }
-    .about-panel:after { content: "★"; position: absolute; right: -12px; bottom: -65px; font-size: 220px; line-height: 1; color: rgba(255,255,255,.045); }
-    .about-panel .quote-mark { color: var(--gold); font-family: Georgia, serif; font-size: 55px; line-height: .8; }
-    .about-panel blockquote { margin: 15px 0 25px; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 25px; line-height: 1.3; position: relative; z-index: 1; }
-    .about-panel p { margin: 0; color: #d3dfeb; font-size: 14px; position: relative; z-index: 1; }
-    .about-copy .eyebrow { color: var(--blue); }
-    .about-copy h2 { margin: 14px 0 18px; color: var(--navy); font-size: clamp(29px, 3.3vw, 39px); line-height: 1.15; letter-spacing: -.035em; }
-    .about-copy p { color: var(--muted); }
-    .pill-list { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
-    .pill { border-radius: 999px; padding: 8px 12px; background: #eef3f8; color: var(--navy); font-size: 12px; font-weight: 700; }
-    .contact { color: #fff; background: linear-gradient(120deg, var(--navy-deep), var(--navy)); }
-    .contact-grid { display: grid; grid-template-columns: 1fr .9fr; gap: 60px; align-items: center; }
-    .contact h2 { font-size: clamp(30px, 4vw, 44px); line-height: 1.13; letter-spacing: -.035em; margin: 14px 0; }
-    .contact-copy p { color: #d4e0ec; max-width: 560px; }
-    .contact-box { background: #fff; color: var(--ink); border-radius: 22px; padding: 28px; box-shadow: var(--shadow); }
-    .contact-box h3 { color: var(--navy); margin: 0 0 20px; font-size: 19px; }
-    .contact-line { display: flex; gap: 13px; align-items: flex-start; padding: 14px 0; border-top: 1px solid var(--line); }
-    .contact-line .trust-icon { flex-basis: 40px; width: 40px; height: 40px; }
-    .contact-line strong { display: block; font-size: 13px; color: var(--navy); }
-    .contact-line a, .contact-line span { font-size: 14px; color: var(--muted); text-decoration: none; overflow-wrap: anywhere; }
-    .contact-line a:hover { color: var(--red); text-decoration: underline; }
-    footer { padding: 27px 0; background: #07172a; color: #aebdcd; font-size: 12px; }
-    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .footer-brand { color: white; font-weight: 800; font-family: Montserrat, sans-serif; }
-    .disclaimer { max-width: 760px; margin-top: 9px; color: #8397ad; font-size: 11px; }
-    @media (max-width: 800px) {
-      .nav { min-height: 74px; }
-      .nav-right a:not(.btn) { display: none; }
-      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 35px; }
-      .hero-grid { padding: 64px 0; }
-      .hero-card { max-width: 520px; }
-      .trust-inner { grid-template-columns: 1fr; gap: 0; padding: 10px 0; }
-      .trust-item { justify-content: flex-start; padding: 10px 0; }
-      section { padding: 64px 0; }
-      .feature-grid { grid-template-columns: 1fr; }
-      .about-grid { gap: 28px; }
-      .contact-grid { gap: 28px; }
-      .footer-inner { align-items: flex-start; flex-direction: column; }
-    }
-    @media (max-width: 460px) {
-      .wrap { width: min(100% - 28px, 1120px); }
-      .brand-mark { width: 42px; height: 42px; }
-      .brand-name { font-size: 13px; }
-      .nav-right .btn { padding: 11px 13px; font-size: 12px; }
-      .hero-copy { font-size: 16px; }
-      .hero-card, .contact-box, .about-panel { padding: 24px; }
-      .hero-actions .btn { width: 100%; }
-    }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *:before, *:after { transition: none !important; } }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patriot House Sober Living | Structured & Safe Recovery Environment</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1b2a47',
+                            900: '#0f172a',
+                            950: '#0a0f1d',
+                        },
+                        crimson: {
+                            600: '#b91c1c',
+                            700: '#991b1b',
+                        },
+                        bronze: {
+                            400: '#fbbf24',
+                            500: '#d97706',
+                            600: '#b45309',
+                        },
+                        warmbg: '#fcfbf7',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfbf7;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(27, 42, 71, 0.90) 100%), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
 </head>
-<body>
-  <div class="topline"></div>
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="#" aria-label="Patriot House Sober Living home">
-        <div class="brand-mark" aria-hidden="true">★</div>
-        <div class="brand-name">PATRIOT HOUSE<span>SOBER LIVING · OKLAHOMA CITY</span></div>
-      </a>
-      <nav class="nav-right" aria-label="Main navigation">
-        <a href="#approach">Our Approach</a>
-        <a href="#support">Support</a>
-        <a class="btn btn-primary" href="#contact">Contact Us <span aria-hidden="true">→</span></a>
-      </nav>
-    </div>
-  </header>
+<body class="text-slate-800 antialiased selection:bg-crimson-600 selection:text-white">
 
-  <main>
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow">A fresh start. A stronger foundation.</div>
-          <h1>Recovery grows with <em>structure, support,</em> and community.</h1>
-          <p class="hero-copy">Patriot House Sober Living provides men in recovery with a supportive, structured living environment in Oklahoma City—so they can focus on building healthy routines and moving forward.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="tel:+14059230664">Call to Ask About Availability <span aria-hidden="true">→</span></a>
-            <a class="btn btn-light" href="mailto:info@patriothouseokc.org?subject=Patriot%20House%20Sober%20Living%20Inquiry">Email Our Program Director</a>
-          </div>
-          <div class="hero-note"><span aria-hidden="true">✦</span> <span><strong>Safe. Structured. Supportive.</strong> One day and one step at a time.</span></div>
-        </div>
-        <aside class="hero-card" aria-label="What Patriot House offers">
-          <div class="card-star" aria-hidden="true">★</div>
-          <h2>A place to keep moving forward.</h2>
-          <p>Recovery is built through everyday choices, accountability, and connection. We help residents create space for those choices.</p>
-          <ul>
-            <li><span class="check">✓</span> A structured sober-living environment</li>
-            <li><span class="check">✓</span> Recovery-focused routines and accountability</li>
-            <li><span class="check">✓</span> Help connecting with community resources</li>
-            <li><span class="check">✓</span> Faith-based, 12-step, and SMART Recovery options</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <div class="trust-strip">
-      <div class="wrap trust-inner">
-        <div class="trust-item"><div class="trust-icon" aria-hidden="true">⌂</div><div><strong>Supportive Living</strong><span>A home-centered recovery environment</span></div></div>
-        <div class="trust-item"><div class="trust-icon" aria-hidden="true">◎</div><div><strong>Practical Life Support</strong><span>Routines, resources, and next steps</span></div></div>
-        <div class="trust-item"><div class="trust-icon" aria-hidden="true">✦</div><div><strong>Community & Connection</strong><span>Encouragement through the process</span></div></div>
-      </div>
+    <!-- Top Emergency Banner -->
+    <div class="bg-crimson-700 text-white text-xs md:text-sm py-2 px-4 text-center font-medium shadow-inner flex items-center justify-center gap-2">
+        <i class="fa-solid fa-phone-volume animate-pulse"></i>
+        <span>Need Immediate Support or Admissions Help? Call Us 24/7: <a href="tel:6095254506" class="underline font-bold hover:text-amber-200 transition-colors">609-525-4506</a></span>
     </div>
 
-    <section class="features" id="support">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="eyebrow">Support for the next chapter</div>
-          <h2>More than a place to stay.</h2>
-          <p>A stable living environment can help make room for the daily work of recovery. Our focus is on structure, responsibility, and connecting residents with useful support.</p>
+    <!-- Navigation Header -->
+    <nav class="sticky top-0 z-50 bg-navy-900/95 backdrop-blur-md text-white border-b border-slate-800 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center">
+                        <!-- SVG Emblem matching Official Logo -->
+                        <svg class="w-full h-full drop-shadow-md" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Chimney -->
+                            <rect x="31" y="16" width="9" height="16" fill="#0C2340"/>
+                            <!-- House Shield Outline -->
+                            <path d="M50 10 L92 38 L82 38 L82 54 C82 76 66 92 50 98 C34 92 18 76 18 54 L18 38 L8 38 Z" fill="#0C2340"/>
+                            <!-- Inner Cream Area -->
+                            <path d="M50 20 L74 37 L74 53 C74 70 62 83 50 88 C38 83 26 70 26 53 L26 37 Z" fill="#F8F6F0"/>
+                            <!-- Inner Red Structure -->
+                            <path d="M50 27 L68 41 L68 54 C68 66 58 77 50 81 C42 77 32 66 32 54 L32 41 Z" fill="#A62628"/>
+                            <!-- Inner White Chevron Line -->
+                            <path d="M50 67 L63 76 L63 71 L50 62 L37 71 L37 76 Z" fill="#F8F6F0"/>
+                            <!-- Inner White Star -->
+                            <polygon points="50,33 53,41 61,41 54.5,46 57,54 50,49 43,54 45.5,46 39,41 47,41" fill="#FFFFFF"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight uppercase block leading-none text-white group-hover:text-amber-400 transition-colors">Patriot House</span>
+                        <span class="text-[10px] text-amber-400 font-bold tracking-widest block uppercase mt-1">Sober Living</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#about" class="hover:text-amber-400 transition-colors">About Us</a>
+                    <a href="#features" class="hover:text-amber-400 transition-colors">Amenities</a>
+                    <a href="#rules" class="hover:text-amber-400 transition-colors">Requirements</a>
+                    <a href="#gallery" class="hover:text-amber-400 transition-colors">Residences</a>
+                    <a href="#faq" class="hover:text-amber-400 transition-colors">FAQ</a>
+                    <a href="#admissions" class="bg-crimson-600 hover:bg-crimson-700 text-white px-5 py-2.5 rounded-lg shadow-md transition-all font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-paper-plane text-xs"></i> Apply Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white p-2 focus:outline-none" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="feature-grid">
-          <article class="feature">
-            <div class="feature-icon" aria-hidden="true">✓</div>
-            <h3>Structure & Accountability</h3>
-            <p>Clear house expectations, shared responsibilities, and recovery-minded routines help residents practice consistency and independence.</p>
-          </article>
-          <article class="feature">
-            <div class="feature-icon" aria-hidden="true">↗</div>
-            <h3>Work & Life Skills</h3>
-            <p>Support connecting with employment resources, community services, and practical next steps toward greater stability.</p>
-          </article>
-          <article class="feature">
-            <div class="feature-icon" aria-hidden="true">♡</div>
-            <h3>Recovery Community</h3>
-            <p>Residents can explore faith-based support, 12-step meetings, SMART Recovery, and other community recovery resources.</p>
-          </article>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-950 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block text-slate-300 hover:text-amber-400 py-2 border-b border-slate-800">About Us</a>
+            <a href="#features" class="block text-slate-300 hover:text-amber-400 py-2 border-b border-slate-800">Amenities & Support</a>
+            <a href="#rules" class="block text-slate-300 hover:text-amber-400 py-2 border-b border-slate-800">Program Requirements</a>
+            <a href="#gallery" class="block text-slate-300 hover:text-amber-400 py-2 border-b border-slate-800">Residences</a>
+            <a href="#faq" class="block text-slate-300 hover:text-amber-400 py-2 border-b border-slate-800">FAQ</a>
+            <a href="#admissions" class="block bg-crimson-600 text-center text-white py-3 rounded-lg font-bold shadow mt-2">Apply for Admission</a>
         </div>
-      </div>
+    </nav>
+
+    <!-- Hero Banner Section -->
+    <section class="hero-gradient text-white py-20 lg:py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-semibold tracking-wide">
+                        <i class="fa-solid fa-shield-halved"></i> Structured Veteran & Patriot-Focused Recovery
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-white">
+                        Reclaim Your Purpose.<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-crimson-500">Rebuild Your Life.</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        A safe, honorable, and disciplined sober living environment tailored to support veterans, first responders, and goal-oriented individuals on their path to lasting independence.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#admissions" class="bg-crimson-600 hover:bg-crimson-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-3">
+                            <span>Start Admissions Process</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#about" class="bg-slate-800/90 hover:bg-slate-700 text-slate-200 font-semibold px-8 py-4 rounded-xl border border-slate-700 hover:border-slate-500 transition-all text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-compass"></i> Explore Our Community
+                        </a>
+                    </div>
+
+                    <!-- Trust Stats -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-800/80 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-amber-400">24/7</div>
+                            <div class="text-xs text-slate-400 uppercase tracking-wider font-medium">On-Site Support</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-amber-400">100%</div>
+                            <div class="text-xs text-slate-400 uppercase tracking-wider font-medium">Zero Tolerance Policy</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-amber-400">Peer-Led</div>
+                            <div class="text-xs text-slate-400 uppercase tracking-wider font-medium">Accountability</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Inquiry Card -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card text-slate-900 rounded-2xl p-6 sm:p-8 shadow-2xl border border-white/20 relative">
+                        <div class="absolute -top-3 right-6 bg-amber-500 text-navy-950 text-xs font-black uppercase px-3 py-1 rounded-full shadow">
+                            Confidential Intake
+                        </div>
+                        <div class="flex items-center gap-3 mb-4 border-b border-slate-200 pb-3">
+                            <svg class="w-10 h-10 shrink-0" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="31" y="16" width="9" height="16" fill="#0C2340"/>
+                                <path d="M50 10 L92 38 L82 38 L82 54 C82 76 66 92 50 98 C34 92 18 76 18 54 L18 38 L8 38 Z" fill="#0C2340"/>
+                                <path d="M50 20 L74 37 L74 53 C74 70 62 83 50 88 C38 83 26 70 26 53 L26 37 Z" fill="#F8F6F0"/>
+                                <path d="M50 27 L68 41 L68 54 C68 66 58 77 50 81 C42 77 32 66 32 54 L32 41 Z" fill="#A62628"/>
+                                <path d="M50 67 L63 76 L63 71 L50 62 L37 71 L37 76 Z" fill="#F8F6F0"/>
+                                <polygon points="50,33 53,41 61,41 54.5,46 57,54 50,49 43,54 45.5,46 39,41 47,41" fill="#FFFFFF"/>
+                            </svg>
+                            <div>
+                                <h3 class="text-xl font-bold text-navy-950 leading-none">Request Information</h3>
+                                <p class="text-xs text-slate-500 mt-1">Direct callback from our intake team</p>
+                            </div>
+                        </div>
+                        
+                        <form id="quick-intake-form" onsubmit="handleQuickSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Full Name</label>
+                                <input type="text" required placeholder="John Doe" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-navy-800 focus:outline-none text-sm bg-slate-50">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone Number</label>
+                                <input type="tel" required placeholder="(555) 000-0000" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-navy-800 focus:outline-none text-sm bg-slate-50">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Applicant Status</label>
+                                <select class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-navy-800 focus:outline-none text-sm bg-slate-50 text-slate-700">
+                                    <option>Self Seeking Placement</option>
+                                    <option>Family Member / Loved One</option>
+                                    <option>Case Manager / Referral Partner</option>
+                                    <option>Veteran / Military Service Member</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-navy-900 hover:bg-navy-800 text-white font-bold py-3.5 rounded-lg shadow transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-shield-heart text-amber-400"></i> Request Confidential Contact
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
 
-    <section id="approach">
-      <div class="wrap about-grid">
-        <div class="about-panel">
-          <div class="quote-mark" aria-hidden="true">“</div>
-          <blockquote>You don’t have to have your whole future figured out. Start by building a solid foundation today.</blockquote>
-          <p>Small steps. Honest effort. A community that encourages progress.</p>
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-warmbg border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1000&q=80" alt="Patriot House Community" class="rounded-2xl shadow-xl w-full h-[450px] object-cover">
+                    <div class="absolute -bottom-6 -right-6 bg-navy-900 text-white p-6 rounded-2xl shadow-xl hidden sm:block max-w-xs border border-slate-700">
+                        <i class="fa-solid fa-quote-left text-amber-400 text-2xl mb-2"></i>
+                        <p class="text-xs text-slate-300 italic">"Structure and camaraderie gave me back the honor and stability I lost during my darkest days."</p>
+                        <span class="block text-xs font-bold text-amber-400 mt-2">— Patriot House Resident Alum</span>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="inline-block px-3 py-1 rounded-md bg-amber-100 text-bronze-600 font-bold text-xs uppercase tracking-wider">
+                        Honor • Integrity • Accountability
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-950 tracking-tight">
+                        A Higher Standard for Sober Living
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        At **Patriot House Sober Living**, we recognize that sustainable recovery requires more than just a place to sleep. It requires an environment rooted in purpose, mutual respect, discipline, and authentic brotherhood.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Founded with a mission to serve military veterans, emergency responders, and dedicated individuals, our residences foster clean living while equipping residents with actionable life skills, employment resources, and peer support.
+                    </p>
+
+                    <!-- Key Pillars -->
+                    <div class="grid sm:grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-start gap-3 p-3 rounded-lg bg-white shadow-sm border border-slate-200">
+                            <div class="p-2 bg-navy-900 text-amber-400 rounded-lg shrink-0">
+                                <i class="fa-solid fa-users-line"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Peer-Led Brotherhood</h4>
+                                <p class="text-xs text-slate-500">Shared experiences create strong accountability networks.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 p-3 rounded-lg bg-white shadow-sm border border-slate-200">
+                            <div class="p-2 bg-navy-900 text-amber-400 rounded-lg shrink-0">
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Structured Routine</h4>
+                                <p class="text-xs text-slate-500">Daily curfews, house meetings, and chore responsibilities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="about-copy">
-          <div class="eyebrow">Our approach</div>
-          <h2>Progress happens one day at a time.</h2>
-          <p>At Patriot House, we believe a dependable environment and a community of accountability can support people as they work toward lasting recovery. Our goal is to encourage responsible choices, healthy routines, and connection to resources that support the next stage of life.</p>
-          <p>We welcome inquiries from individuals, families, case managers, treatment providers, and other referral partners who want to learn more about our sober-living program.</p>
-          <div class="pill-list">
-            <span class="pill">Safe</span><span class="pill">Structured</span><span class="pill">Supportive</span><span class="pill">Community-minded</span>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section class="contact" id="contact">
-      <div class="wrap contact-grid">
-        <div class="contact-copy">
-          <div class="eyebrow">Take the next step</div>
-          <h2>Have questions about living at Patriot House?</h2>
-          <p>Reach out to ask about the program, current availability, expectations, or referral information. We’ll help you understand the next steps.</p>
-          <a class="btn btn-primary" href="tel:+14059230664">Call the Program Director <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="contact-box">
-          <h3>Contact Patriot House</h3>
-          <div class="contact-line">
-            <div class="trust-icon" aria-hidden="true">☎</div>
-            <div><strong>Phone</strong><a href="tel:+14059230664">609-525-4506</a></div>
-          </div>
-          <div class="contact-line">
-            <div class="trust-icon" aria-hidden="true">✉</div>
-            <div><strong>Email</strong><a href="mailto:info@patriothouseokc.org">info@patriothouseokc.org</a></div>
-          </div>
-          <div class="contact-line">
-            <div class="trust-icon" aria-hidden="true">⌖</div>
-            <div><strong>Location</strong><span>Northwest Expressway & MacArthur area<br>Oklahoma City, Oklahoma</span></div>
-          </div>
-          <div class="contact-line">
-            <div class="trust-icon" aria-hidden="true">◷</div>
-            <div><strong>Availability</strong><span>Please contact us for current bed availability and program details.</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+    <!-- Core Features & Amenities Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-crimson-600 uppercase tracking-widest mb-2">Comprehensive Support</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-navy-950">Designed for Total Recovery Success</p>
+                <p class="text-slate-600 mt-4 text-base">We provide all the tools, amenities, and community safeguards required to help you build a solid foundation for long-term sobriety.</p>
+            </div>
 
-  <footer>
-    <div class="wrap">
-      <div class="footer-inner">
-        <div><div class="footer-brand">PATRIOT HOUSE SOBER LIVING</div><div>Oklahoma City, Oklahoma</div></div>
-        <div>© <span id="year">2026</span> Patriot House Sober Living. All rights reserved.</div>
-      </div>
-      <div class="disclaimer">Patriot House is a sober-living residence, not a hospital, detoxification facility, or substitute for medical or behavioral-health treatment. Program availability and services may vary. If you are experiencing a medical emergency, call 911.</div>
-    </div>
-  </footer>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-8 rounded-2xl bg-warmbg border border-slate-200 hover:border-amber-500/50 hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-navy-900 text-amber-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">24/7 House Supervision</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Experienced, compassionate house managers live on-site to maintain structure, safety, and continuous drug/alcohol screening.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-8 rounded-2xl bg-warmbg border border-slate-200 hover:border-amber-500/50 hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-navy-900 text-amber-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">Career & Job Assistance</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Resume writing workshops, job search assistance, and trade referral programs to help you gain financial independence.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-8 rounded-2xl bg-warmbg border border-slate-200 hover:border-amber-500/50 hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-navy-900 text-amber-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-house-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">Comfortable Living</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Fully furnished spacious homes with high-speed Wi-Fi, modern kitchens, laundry facilities, and peaceful community rooms.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="p-8 rounded-2xl bg-warmbg border border-slate-200 hover:border-amber-500/50 hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-navy-900 text-amber-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">12-Step Integration</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Mandatory participation in local recovery meetings, sponsorship programs, and structured weekly group reflections.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="p-8 rounded-2xl bg-warmbg border border-slate-200 hover:border-amber-500/50 hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-navy-900 text-amber-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">Veteran Focus</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Direct connection to VA health services, veteran mentorship, transition planning, and specialized PTSD peer support.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="p-8 rounded-2xl bg-warmbg border border-slate-200 hover:border-amber-500/50 hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-navy-900 text-amber-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-flask-vial"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-950 mb-3">Random Drug Testing</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Regular and random toxicology screens ensure total transparency and protect the sobriety of the entire home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Requirements & Rules Section -->
+    <section id="rules" class="py-20 bg-navy-950 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-amber-400 font-bold uppercase tracking-widest text-xs">Community Guidelines</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Clear Rules build Strong Character</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Structure is the cornerstone of successful sober living. Our guidelines are straightforward, fair, and rigorously enforced to maintain safety and peace for all residents.
+                    </p>
+                    <div class="p-4 rounded-xl bg-crimson-900/40 border border-crimson-700/50 flex items-start gap-3">
+                        <i class="fa-solid fa-triangle-exclamation text-crimson-500 text-xl mt-1"></i>
+                        <p class="text-xs text-slate-200 leading-relaxed">
+                            <strong class="text-white">Zero Tolerance Policy:</strong> Any possession or use of alcohol or illicit substances results in immediate discharge and referral to detoxification services.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="bg-navy-900 p-6 rounded-xl border border-slate-800 space-y-2">
+                            <div class="text-amber-400 text-lg font-bold flex items-center gap-2">
+                                <i class="fa-solid fa-ban"></i> 100% Sobriety
+                            </div>
+                            <p class="text-xs text-slate-400">Complete abstinence from drugs and alcohol. Attendance at mandatory urinalysis screens.</p>
+                        </div>
+
+                        <div class="bg-navy-900 p-6 rounded-xl border border-slate-800 space-y-2">
+                            <div class="text-amber-400 text-lg font-bold flex items-center gap-2">
+                                <i class="fa-solid fa-clock"></i> Curfew Adherence
+                            </div>
+                            <p class="text-xs text-slate-400">Standard curfew is 10:00 PM weekdays / 11:00 PM weekends for developing healthy routines.</p>
+                        </div>
+
+                        <div class="bg-navy-900 p-6 rounded-xl border border-slate-800 space-y-2">
+                            <div class="text-amber-400 text-lg font-bold flex items-center gap-2">
+                                <i class="fa-solid fa-calendar-check"></i> 12-Step Meetings
+                            </div>
+                            <p class="text-xs text-slate-400">Must attend at least 4 recovery meetings per week and maintain active contact with a sponsor.</p>
+                        </div>
+
+                        <div class="bg-navy-900 p-6 rounded-xl border border-slate-800 space-y-2">
+                            <div class="text-amber-400 text-lg font-bold flex items-center gap-2">
+                                <i class="fa-solid fa-person-digging"></i> Employment / Purpose
+                            </div>
+                            <p class="text-xs text-slate-400">Must be gainfully employed, actively job hunting, attending school, or performing community service.</p>
+                        </div>
+
+                        <div class="bg-navy-900 p-6 rounded-xl border border-slate-800 space-y-2">
+                            <div class="text-amber-400 text-lg font-bold flex items-center gap-2">
+                                <i class="fa-solid fa-broom"></i> Daily House Chores
+                            </div>
+                            <p class="text-xs text-slate-400">Residents maintain personal room cleanliness and participate in assigned communal duties.</p>
+                        </div>
+
+                        <div class="bg-navy-900 p-6 rounded-xl border border-slate-800 space-y-2">
+                            <div class="text-amber-400 text-lg font-bold flex items-center gap-2">
+                                <i class="fa-solid fa-comments"></i> House Meetings
+                            </div>
+                            <p class="text-xs text-slate-400">Mandatory weekly resident community meetings to review goals, resolve conflicts, and plan meals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-warmbg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-xs font-bold text-crimson-600 uppercase tracking-widest mb-2">Our Residences</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-navy-950">Clean, Dignified Living Spaces</p>
+                </div>
+                <p class="text-slate-600 max-w-md text-sm mt-4 md:mt-0">
+                    Designed to promote tranquility, comfort, and focus. Take a look inside our clean, fully furnished homes.
+                </p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="relative group overflow-hidden rounded-2xl shadow-md bg-slate-900">
+                    <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=800&q=80" alt="Living Room" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                    <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
+                        <span class="text-xs font-bold text-amber-400 uppercase">Communal Spaces</span>
+                        <h4 class="font-bold">Spacious Living Area</h4>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-2xl shadow-md bg-slate-900">
+                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80" alt="Bedroom" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                    <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
+                        <span class="text-xs font-bold text-amber-400 uppercase">Bedrooms</span>
+                        <h4 class="font-bold">Comfortable Shared Rooms</h4>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-2xl shadow-md bg-slate-900">
+                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Kitchen" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                    <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
+                        <span class="text-xs font-bold text-amber-400 uppercase">Kitchen & Dining</span>
+                        <h4 class="font-bold">Fully Equipped Kitchen</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-crimson-600 uppercase tracking-widest mb-2">Stories of Renewal</h2>
+                <p class="text-3xl font-extrabold text-navy-950">Words From Our Residents & Alumni</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="p-6 rounded-2xl bg-warmbg border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4 gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm italic mb-6">"As an Army veteran, transitioning back to civilian life while fighting addiction felt impossible. Patriot House gave me back structure, discipline, and a group of brothers who truly understood my struggles."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+                        <div class="w-10 h-10 rounded-full bg-navy-900 text-white font-bold flex items-center justify-center text-sm">
+                            MD
+                        </div>
+                        <div>
+                            <div class="font-bold text-navy-950 text-sm">Marcus D.</div>
+                            <div class="text-xs text-slate-500">Resident (18 Months Sober)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="p-6 rounded-2xl bg-warmbg border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4 gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm italic mb-6">"The accountability here saved my life. Random screenings and required meetings kept me honest, while the house managers helped me build a realistic resume."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+                        <div class="w-10 h-10 rounded-full bg-navy-900 text-white font-bold flex items-center justify-center text-sm">
+                            JR
+                        </div>
+                        <div>
+                            <div class="font-bold text-navy-950 text-sm">James R.</div>
+                            <div class="text-xs text-slate-500">Alumni Member</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="p-6 rounded-2xl bg-warmbg border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4 gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm italic mb-6">"I referred my brother here after several failed attempts elsewhere. The Patriot House environment was the exact balance of compassion and firm boundaries he needed."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+                        <div class="w-10 h-10 rounded-full bg-navy-900 text-white font-bold flex items-center justify-center text-sm">
+                            SK
+                        </div>
+                        <div>
+                            <div class="font-bold text-navy-950 text-sm">Sarah K.</div>
+                            <div class="text-xs text-slate-500">Family Referral</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step-by-Step Interactive Admissions Application -->
+    <section id="admissions" class="py-20 bg-warmbg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-xs font-bold text-crimson-600 uppercase tracking-widest">Confidential Intake</span>
+                <h2 class="text-3xl font-extrabold text-navy-950 mt-1">Apply for Placement</h2>
+                <p class="text-slate-600 text-sm mt-2">Take the first step today. Complete our 3-step application form below.</p>
+            </div>
+
+            <!-- Form Container -->
+            <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-6 sm:p-10">
+                
+                <div class="flex items-center justify-center gap-3 mb-6">
+                    <svg class="w-12 h-12" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="31" y="16" width="9" height="16" fill="#0C2340"/>
+                        <path d="M50 10 L92 38 L82 38 L82 54 C82 76 66 92 50 98 C34 92 18 76 18 54 L18 38 L8 38 Z" fill="#0C2340"/>
+                        <path d="M50 20 L74 37 L74 53 C74 70 62 83 50 88 C38 83 26 70 26 53 L26 37 Z" fill="#F8F6F0"/>
+                        <path d="M50 27 L68 41 L68 54 C68 66 58 77 50 81 C42 77 32 66 32 54 L32 41 Z" fill="#A62628"/>
+                        <path d="M50 67 L63 76 L63 71 L50 62 L37 71 L37 76 Z" fill="#F8F6F0"/>
+                        <polygon points="50,33 53,41 61,41 54.5,46 57,54 50,49 43,54 45.5,46 39,41 47,41" fill="#FFFFFF"/>
+                    </svg>
+                    <div class="text-left">
+                        <div class="text-lg font-black text-navy-950 uppercase leading-none">Patriot House</div>
+                        <div class="text-xs font-bold text-crimson-600 uppercase tracking-widest">Sober Living Application</div>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="mb-8">
+                    <div class="flex justify-between text-xs font-bold text-slate-500 mb-2">
+                        <span id="step1-label" class="text-navy-900">1. Applicant Info</span>
+                        <span id="step2-label">2. Recovery History</span>
+                        <span id="step3-label">3. Expectations & Submit</span>
+                    </div>
+                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div id="form-progress" class="bg-navy-900 h-full w-1/3 transition-all duration-300"></div>
+                    </div>
+                </div>
+
+                <form id="admissions-form" onsubmit="handleAdmissionsSubmit(event)">
+                    <!-- Step 1 -->
+                    <div id="step-1" class="space-y-4">
+                        <h3 class="text-lg font-bold text-navy-950 border-b pb-2">Step 1: Contact Information</h3>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">First & Last Name *</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-navy-800 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone Number *</label>
+                                <input type="tel" required class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-navy-800 outline-none">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email Address</label>
+                                <input type="email" class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-navy-800 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Veteran / First Responder? *</label>
+                                <select required class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-navy-800 outline-none">
+                                    <option value="">Select Status</option>
+                                    <option value="military">Military Veteran / Active Duty</option>
+                                    <option value="first-responder">First Responder (Police, Fire, EMS)</option>
+                                    <option value="civilian">Civilian Patriot Supporter</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 flex justify-end">
+                            <button type="button" onclick="goToStep(2)" class="bg-navy-900 hover:bg-navy-800 text-white font-bold px-6 py-3 rounded-lg text-sm flex items-center gap-2">
+                                Next: Recovery Background <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div id="step-2" class="space-y-4 hidden">
+                        <h3 class="text-lg font-bold text-navy-950 border-b pb-2">Step 2: Recovery Background</h3>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Desired Move-In Date *</label>
+                                <input type="date" required class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-navy-800 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Current Clean Date / Sobriety Length</label>
+                                <input type="text" placeholder="e.g. 30 days sober / Currently in detox" class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-navy-800 outline-none">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Are you transitioning from a treatment center/detox?</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-navy-800 outline-none">
+                                <option>Yes - Inpatient Treatment Center</option>
+                                <option>Yes - Detox Facility</option>
+                                <option>No - Transitioning from Home</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="pt-4 flex justify-between">
+                            <button type="button" onclick="goToStep(1)" class="bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-6 py-3 rounded-lg text-sm">
+                                Back
+                            </button>
+                            <button type="button" onclick="goToStep(3)" class="bg-navy-900 hover:bg-navy-800 text-white font-bold px-6 py-3 rounded-lg text-sm flex items-center gap-2">
+                                Next: Final Details <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div id="step-3" class="space-y-4 hidden">
+                        <h3 class="text-lg font-bold text-navy-950 border-b pb-2">Step 3: Commitments & Submit</h3>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Additional Notes / Referral Details</label>
+                            <textarea rows="3" placeholder="Tell us anything else that could assist your intake process..." class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-navy-800 outline-none"></textarea>
+                        </div>
+
+                        <div class="space-y-2 pt-2">
+                            <label class="flex items-start gap-2 cursor-pointer">
+                                <input type="checkbox" required class="mt-1 rounded text-navy-900 focus:ring-navy-800">
+                                <span class="text-xs text-slate-600">I understand that Patriot House enforces a zero-tolerance drug and alcohol policy. *</span>
+                            </label>
+                            <label class="flex items-start gap-2 cursor-pointer">
+                                <input type="checkbox" required class="mt-1 rounded text-navy-900 focus:ring-navy-800">
+                                <span class="text-xs text-slate-600">I agree to receive a telephone callback from an intake coordinator. *</span>
+                            </label>
+                        </div>
+
+                        <div class="pt-4 flex justify-between">
+                            <button type="button" onclick="goToStep(2)" class="bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-6 py-3 rounded-lg text-sm">
+                                Back
+                            </button>
+                            <button type="submit" class="bg-crimson-600 hover:bg-crimson-700 text-white font-bold px-8 py-3.5 rounded-lg text-sm shadow-md flex items-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i> Submit Application
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-xs font-bold text-crimson-600 uppercase tracking-widest mb-2">Got Questions?</h2>
+                <p class="text-3xl font-extrabold text-navy-950">Frequently Asked Questions</p>
+            </div>
+
+            <div class="space-y-4" id="faq-accordion">
+                <!-- FAQ Item 1 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq('faq-1')" class="w-full flex justify-between items-center p-5 text-left font-bold text-navy-950 bg-warmbg hover:bg-slate-100 transition-colors">
+                        <span>What are the criteria for admission to Patriot House?</span>
+                        <i id="faq-1-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-1" class="hidden p-5 bg-white text-slate-600 text-sm border-t border-slate-200 leading-relaxed">
+                        Applicants must demonstrate a sincere desire to maintain full sobriety, have completed medical detox (if required), be willing to comply with drug testing, adhere to house curfews, and contribute to communal chores.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq('faq-2')" class="w-full flex justify-between items-center p-5 text-left font-bold text-navy-950 bg-warmbg hover:bg-slate-100 transition-colors">
+                        <span>Do I have to be a military veteran to reside here?</span>
+                        <i id="faq-2-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-2" class="hidden p-5 bg-white text-slate-600 text-sm border-t border-slate-200 leading-relaxed">
+                        While our community is heavily tailored towards supporting military veterans and first responders, we welcome civilian men who share our values of structure, respect, and mutual accountability.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq('faq-3')" class="w-full flex justify-between items-center p-5 text-left font-bold text-navy-950 bg-warmbg hover:bg-slate-100 transition-colors">
+                        <span>How long can a resident stay at Patriot House?</span>
+                        <i id="faq-3-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-3" class="hidden p-5 bg-white text-slate-600 text-sm border-t border-slate-200 leading-relaxed">
+                        We offer flexible stay durations tailored to each individual's journey. We typically recommend a minimum commitment of 90 days to establish strong recovery habits, though many stay 6 to 12 months.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq('faq-4')" class="w-full flex justify-between items-center p-5 text-left font-bold text-navy-950 bg-warmbg hover:bg-slate-100 transition-colors">
+                        <span>What is included in the monthly program fee?</span>
+                        <i id="faq-4-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-4" class="hidden p-5 bg-white text-slate-600 text-sm border-t border-slate-200 leading-relaxed">
+                        Fees cover fully furnished housing, high-speed Wi-Fi, all utilities, laundry, drug testing, and access to peer recovery support and career resources.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-navy-950 text-slate-400 text-sm border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <!-- Col 1 -->
+                <div class="space-y-4 md:col-span-1">
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-10 h-10 shrink-0" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="31" y="16" width="9" height="16" fill="#ffffff" opacity="0.3"/>
+                            <path d="M50 10 L92 38 L82 38 L82 54 C82 76 66 92 50 98 C34 92 18 76 18 54 L18 38 L8 38 Z" fill="#ffffff"/>
+                            <path d="M50 20 L74 37 L74 53 C74 70 62 83 50 88 C38 83 26 70 26 53 L26 37 Z" fill="#0c172a"/>
+                            <path d="M50 27 L68 41 L68 54 C68 66 58 77 50 81 C42 77 32 66 32 54 L32 41 Z" fill="#b91c1c"/>
+                            <path d="M50 67 L63 76 L63 71 L50 62 L37 71 L37 76 Z" fill="#ffffff"/>
+                            <polygon points="50,33 53,41 61,41 54.5,46 57,54 50,49 43,54 45.5,46 39,41 47,41" fill="#FFFFFF"/>
+                        </svg>
+                        <div>
+                            <span class="text-white font-black uppercase text-base tracking-tight block">Patriot House</span>
+                            <span class="text-amber-400 font-bold text-[10px] tracking-widest uppercase block">Sober Living</span>
+                        </div>
+                    </div>
+                    <p class="text-xs leading-relaxed text-slate-400">
+                        Providing structured, patriotic, and safe sober living environments for veterans and individuals seeking true transformation.
+                    </p>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Quick Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#about" class="hover:text-amber-400 transition-colors">About Mission</a></li>
+                        <li><a href="#features" class="hover:text-amber-400 transition-colors">Support & Amenities</a></li>
+                        <li><a href="#rules" class="hover:text-amber-400 transition-colors">House Guidelines</a></li>
+                        <li><a href="#gallery" class="hover:text-amber-400 transition-colors">Residences</a></li>
+                        <li><a href="#admissions" class="hover:text-amber-400 transition-colors">Admissions Form</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Admissions Hours</h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li>Phone Intake: <strong class="text-white">24/7 Available</strong></li>
+                        <li>Office Intake: Mon - Fri (8am - 6pm)</li>
+                        <li>Move-ins: Scheduled 7 Days / Week</li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Emergency Contact</h4>
+                    <div class="p-4 rounded-xl bg-navy-900 border border-slate-800 space-y-2">
+                        <div class="text-xs text-slate-400">24/7 Crisis & Admissions Line:</div>
+                        <a href="tel:6095254506" class="text-amber-400 font-extrabold text-base block hover:underline">
+                            609-525-4506
+                        </a>
+                        <div class="text-[10px] text-slate-500">All calls are 100% confidential.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800/80 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; <span id="year"></span> Patriot House Sober Living. All rights reserved.</p>
+                <p class="text-center sm:text-right">Designed for GitHub Pages / DeployNow hosting compatibility.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Set Year dynamically
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Navigation Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close Mobile Menu on Click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Interactive Step Form Navigation
+        function goToStep(step) {
+            document.getElementById('step-1').classList.add('hidden');
+            document.getElementById('step-2').classList.add('hidden');
+            document.getElementById('step-3').classList.add('hidden');
+
+            document.getElementById(`step-${step}`).classList.remove('hidden');
+
+            const progressBar = document.getElementById('form-progress');
+            const l1 = document.getElementById('step1-label');
+            const l2 = document.getElementById('step2-label');
+            const l3 = document.getElementById('step3-label');
+
+            if (step === 1) {
+                progressBar.style.width = '33%';
+                l1.className = 'text-navy-900 font-bold';
+                l2.className = 'text-slate-500';
+                l3.className = 'text-slate-500';
+            } else if (step === 2) {
+                progressBar.style.width = '66%';
+                l1.className = 'text-navy-900 font-bold';
+                l2.className = 'text-navy-900 font-bold';
+                l3.className = 'text-slate-500';
+            } else if (step === 3) {
+                progressBar.style.width = '100%';
+                l1.className = 'text-navy-900 font-bold';
+                l2.className = 'text-navy-900 font-bold';
+                l3.className = 'text-navy-900 font-bold';
+            }
+        }
+
+        // Accordion Toggle
+        function toggleFaq(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById(`${id}-icon`);
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Quick Form Submission Mock
+        function handleQuickSubmit(e) {
+            e.preventDefault();
+            alert('Thank you for reaching out to Patriot House. An intake coordinator will contact you shortly.');
+            e.target.reset();
+        }
+
+        // Admissions Form Submission Mock
+        function handleAdmissionsSubmit(e) {
+            e.preventDefault();
+            alert('Application submitted successfully! Our admissions coordinator will review your information and call you within 24 hours.');
+            goToStep(1);
+            e.target.reset();
+        }
+    </script>
 </body>
 </html>
